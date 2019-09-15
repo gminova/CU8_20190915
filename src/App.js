@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import SimpleTable from './SimpleTable';
+import Graph from './SimpleLineChart';
+import SimpleTabs from './tabs';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
-      <SimpleTable /> 
+      <SimpleTabs />
+      {/* <SimpleTable />
+      <Graph /> */}
     </div>
   );
 }
