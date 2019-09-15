@@ -18,16 +18,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(firstname, surname, gender, DOB, nationality, highestedulevel, eduinstitution, employeerole, employeegrade) {
+  return { firstname, surname, gender, DOB, nationality, highestedulevel, eduinstitution, employeerole, employeegrade };
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('Praskovya','	Dubinina',	'F',	'14/07/1953',	'Crotian'	,'College Graduate',	'Crossroads School of Fine Arts','IT Manager',	'A'),
+  createData('Jaquon',	'Hart',	'M','24/01/1975',	'Indian',	'A Level',	'White Mountain Institute',	'Developer'	,'A'),
+  createData('Vivienne','	Dubinina',	'Cisgender',	'14/07/1937',	'Crotian'	,'High School graduate',	'Crossroads School of Fine Arts','UI Designer',	'A'),
+  createData('James',	'Peters',	'genderqueer','24/01/1975',	'Spanish',	'Post Graduate Degree',	'White Mountain Institute',	'Developer'	,'A'),
+  createData('Matthew',	'Billington',	'Other','24/01/1975',	'French',	'PHD',	'White Mountain Institute',	'DevOps Engineer'	,'A'),
+  createData('Mary',	'Black',	'Non-binary','24/01/1975',	'African',	'A Level',	'White Mountain Institute',	'Developer'	,'A'),
 ];
 
 export default function SimpleTable() {
@@ -42,19 +43,28 @@ export default function SimpleTable() {
             <TableCell align="right">Surname</TableCell>
             <TableCell align="right">Gender</TableCell>
             <TableCell align="right">DOB</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell align="right">Nationality</TableCell>
+            <TableCell align="right">Highest Edu Level</TableCell>
+            <TableCell align="right">Edu Institution</TableCell>
+            <TableCell align="right">Employee Role	</TableCell>
+            <TableCell align="right">Employee Grade
+</TableCell>
+
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <TableRow key={row.name}>
+            <TableRow key={row.firstname}>
               <TableCell component="th" scope="row">
-                {row.name}
+                {row.firstname}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.surname}</TableCell>
+              <TableCell align="right">{row.gender}</TableCell>
+              <TableCell align="right">{row.DOB}</TableCell>
+              <TableCell align="right">{row.nationality}</TableCell>
+              <TableCell align="right">{row.highestedulevel}</TableCell><TableCell align="right">{row.eduinstitution}</TableCell>
+              <TableCell align="right">{row.employeerole}</TableCell>
+              <TableCell align="right">{row.employeegrade}</TableCell>
             </TableRow>
           ))}
         </TableBody>
