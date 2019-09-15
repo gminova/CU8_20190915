@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 import Graph from './SimpleLineChart';
 import SimpleTable from './SimpleTable';
 import CustomizedSlider from './slider';
+import SimpleForm from './SimpleForm';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -77,6 +78,7 @@ export default function SimpleTabs() {
       <SimpleTable />
       </TabPanel>
       <TabPanel value={value} index={2}>
+        <SimpleForm />
       </TabPanel>
       </div>
     </div>

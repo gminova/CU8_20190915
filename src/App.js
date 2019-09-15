@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import SimpleTable from './SimpleTable';
-import Graph from './SimpleLineChart';
 import SimpleTabs from './tabs';
 
 function App() {
