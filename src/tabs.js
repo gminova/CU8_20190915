@@ -64,15 +64,21 @@ export default function SimpleTabs() {
           <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
+      <div  className="data">
       <TabPanel value={value} index={0}>
+        <h1>Profits over time</h1>
       <Graph />
+      <br />
+        <h1>Diversity Index</h1>
         <CustomizedSlider />
       </TabPanel>
       <TabPanel value={value} index={1}>
+        <h1>Employee Diversity Matrix</h1>
       <SimpleTable />
       </TabPanel>
       <TabPanel value={value} index={2}>
       </TabPanel>
+      </div>
     </div>
   );
 }
