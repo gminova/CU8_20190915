@@ -33,7 +33,7 @@ export default class Graph extends PureComponent {
   render() {
     return (
       <LineChart
-        width={500}
+        width={1000}
         height={300}
         data={data}
         margin={{
